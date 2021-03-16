@@ -4,6 +4,7 @@ module.exports = {
         name: 'help',
         aliases: [],
         permissions: [],
+        clientPermissions: [],
         group: 'gen',
         description: 'Sends command help.',
         usage: 'help'

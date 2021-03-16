@@ -5,6 +5,7 @@ module.exports = {
         name: 'ping',
         aliases: ["latency"],
         permissions: [],
+        clientPermissions: [],
         group: 'util',
         description: 'Replies with Client AND API latency.',
         usage: 'ping'
