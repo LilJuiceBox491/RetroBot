@@ -1,10 +1,10 @@
 const Discord = require('discord.js');
 const client = new Discord.Client({
-    messageCacheMaxSize: 10,
-    messageCacheLifetime: 5 * 60,
-    messageSweepInterval: 5 * 60,
-    userCacheLifetime: 60 * 60,
-    userSweepInterval: 5 * 60
+    messageCacheMaxSize: 10, // This can be increased as needed.
+    messageCacheLifetime: 5 * 60, // I recommend you keep this the same.
+    messageSweepInterval: 5 * 60, // ^
+    userCacheLifetime: 60 * 60, // These are for custom user cache sweeping, leave them alone.
+    userSweepInterval: 5 * 60 // ^
 });
 
 client.log = require('./core/util/Logger');
