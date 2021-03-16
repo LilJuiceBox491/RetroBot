@@ -1,6 +1,9 @@
 const statusInterval = require('../util/statusInterval');
 const Help = require('../Handlers/Help');
 
+// eslint-disable-next-line no-unused-vars
+const purgeCachedUsers = require('../util/purgeCachedUsers');
+
 module.exports = {
     config: {
         name: 'ready'
