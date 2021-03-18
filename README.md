@@ -1,3 +1,4 @@
+## Table of Contents:
 - [RetroBot](#retrobot)
 - [Contributors](#contributors)
 - [Dependencies](#dependencies)
