@@ -20,23 +20,20 @@ module.exports = {
                 return message.channel.send(e);
             }
             const e = new Discord.MessageEmbed()
-            .setColor(client.config.colors.help)
-            .setTitle(`${cmd.config.name.toUpperCase()}`)
-            .setDescription(`
-**Description:**
-${cmd.config.description}
-**Usage:**
-${client.config.prefix}${cmd.config.usage}
-            
-**Aliases:**
-${cmd.config.aliases.length > 0 ? cmd.config.aliases.map(a => a.toUpperCase()).join('\n') : 'None.'}
-            `);
+            .setColor(client.config.colors.commands)
+            .setDescription(`**\`${cmd.config.name.charAt(0).toUpperCase() + cmd.config.name.slice(1)}\` Command Help:**`)
+            .addFields(
+                {name: 'Description:', value: `${cmd.config.description}`},
+                {name: 'Usage:', value: `\`${client.config.prefix}${cmd.config.usage}\``},
+                {name: 'Aliases:', value: `${cmd.config.aliases.length > 0 ? cmd.config.aliases.map(a => `\`${a}\``).join('\n') : 'None.'}`}
+            );
+
             message.channel.send(e);
         } else {
             const e = new Discord.MessageEmbed()
-            .setColor(client.config.colors.help)
+            .setColor(client.config.colors.commands)
             .setTitle('List of Commands:')
-            .setDescription(client.helpArr.map(el => `**${el.group.name} Commands**:\n${el.value}\n\n`))
+            .setDescription(client.helpArr.map(el => `**${el.group.name} Commands ${el.group.icon}**:\n${el.value}\n\n`))
             .setFooter(`Use ${client.config.prefix}help [command name/alias here] for command information (i.e usage).`)
             .setThumbnail(client.user.displayAvatarURL());
             return message.channel.send(e);
