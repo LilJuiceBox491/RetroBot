@@ -18,7 +18,7 @@ module.exports = (client) => {
 
             client.on(event.config.name, event.run.bind(null, client));
 
-            // Deleting require.cache isn't strictly necessary here, but due to how caching is handled, not doing so can cause events to not emit properly.
+            // Deleting require.cache isn't strictly necessary here, but not doing so can cause events to not update properly.
             delete require.cache[require.resolve(`../events/${file}`)];
 
             // Log
