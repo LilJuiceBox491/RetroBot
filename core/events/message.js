@@ -21,6 +21,7 @@ module.exports = {
             if(cmdFile) {
                 cmdFile.run(client, message, args);
                 client.log.cmd(`${message.author.tag} (${message.author.id}) executed ${cmdFile.config.name.toUpperCase()} with the following arguments: ${args.length > 0 ? `\n${args.map(el => el).join('\n')}` : 'None.'}`);
+                client.commandsRun++;
             }
         }
     }

@@ -8,6 +8,7 @@ const client = new Discord.Client({
 });
 
 client.log = require('./core/util/Logger');
+client.commandsRun = 0;
 
 // Run initialization.
 const init = require('./core/init');
