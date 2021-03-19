@@ -1,7 +1,7 @@
 const { MessageEmbed } = require("discord.js")
 const { readFileSync } = require('fs');
 
-const ver = JSON.parse(readFileSync('package.json', 'utf8')).version;
+const package = JSON.parse(readFileSync('package.json', 'utf8'));
 
 module.exports = {
     config: {
@@ -17,9 +17,11 @@ module.exports = {
     run: (client, message, args) => {
         const e = new MessageEmbed()
         .setAuthor(message.author.tag, message.author.avatarURL())
+        .setColor(client.config.colors.commands)
         .addFields(
-            {name: 'Client Version:', value: `${client.user.username} is currently running on version \`${ver}\``},
-            {name: 'Source:', value: `${client.user.username} is Open-Source, you can find it's repository [here](https://github.com/LilJuiceBox491/RetroBot).`},
+            {name: 'Client Version:', value: `${client.user.username} is currently running on version \`${package.version}\``},
+            {name: 'Source:', value: `${client.user.username} is Open-Source, you can find it's repository [here](${package.homepage}).`},
+            {name: 'Bug Reports/Feature Requests:', value: `To submit a bug report or a feature request, please click [here](${package.bugs.url}).`},
             {name: 'Last Reset:', value: `${client.lastReset}`, inline: true},
             {name: 'Commands Run Since Last Reset:', value: `${client.commandsRun}`, inline: true}
         );
