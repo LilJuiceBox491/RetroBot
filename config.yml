@@ -4,3 +4,7 @@ prefix: '.'
 colors: 
   commands: '#7289DA'
   errors: 'RED'
+
+permissions: 
+  checkAdmin: true
+  checkOwner: true
