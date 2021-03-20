@@ -1,7 +1,15 @@
 {
   "name": "retrobot",
   "version": "0.0.2-pre",
-  "description": "",
+  "description": "Open-source Discord.js bot.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LilJuiceBox491/RetroBot"
+  },
+  "bugs": {
+    "url": "https://github.com/LilJuiceBox491/RetroBot/issues"
+  },
+  "homepage": "https://github.com/LilJuiceBox491/RetroBot#readme",
   "main": "index.js",
   "scripts": {
     "run": "node index.js"
