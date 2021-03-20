@@ -1,4 +1,5 @@
-
+const permissionCheck = require('../util/permissionCheck');
+const EmbedUtil = require('../util/EmbedUtility');
 
 module.exports = {
     config: {
@@ -19,9 +20,26 @@ module.exports = {
             const cmdFile = client.commands.get(command) || client.commands.get(client.aliases.get(command))
             // If found, run the command file's run() function.
             if(cmdFile) {
+                // Run permission check on member
+                const memberCheck = permissionCheck(client, message.member, cmdFile.config.permissions);
+                if(memberCheck.length) return message.channel.send(EmbedUtil(
+                    client, 
+                    'error', 
+                    `You are missing the following permissions required for this command:\n${cmdFile.config.permissions.map(el => `\`${el}\``).join('\n')}`
+                ));
+
+                //Run permission check on client.
+                const clientCheck = permissionCheck(client, message.member, cmdFile.config.clientPermissions);
+                if(clientCheck.length) return message.channel.send(EmbedUtil(
+                    client, 
+                    'error', 
+                    `I am missing the following permissions required for this command:\n${cmdFile.config.clientPermissions.map(el => `\`${el}\``).join('\n')}`
+                ));
+
+
                 cmdFile.run(client, message, args);
-                client.log.cmd(`${message.author.tag} (${message.author.id}) executed ${cmdFile.config.name.toUpperCase()} with the following arguments: ${args.length > 0 ? `\n${args.map(el => el).join('\n')}` : 'None.'}`);
                 client.commandsRun++;
+                client.log.cmd(`${message.author.tag} (${message.author.id}) executed ${cmdFile.config.name.toUpperCase()} with the following arguments: ${args.length > 0 ? `${args.map(el => el)}` : 'None.'}`);
             }
         }
     }
