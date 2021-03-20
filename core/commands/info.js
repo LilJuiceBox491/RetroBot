@@ -22,6 +22,7 @@ module.exports = {
             {name: 'Client Version:', value: `${client.user.username} is currently running on version \`${package.version}\``},
             {name: 'Source:', value: `${client.user.username} is Open-Source, you can find it's repository [here](${package.homepage}).`},
             {name: 'Bug Reports/Feature Requests:', value: `To submit a bug report or a feature request, please click [here](${package.bugs.url}).`},
+            {name: 'Email:', value: 'Need to email the team? Do so at `retrobotdev@gmail.com`'},
             {name: 'Last Reset:', value: `${client.lastReset}`, inline: true},
             {name: 'Commands Run Since Last Reset:', value: `${client.commandsRun}`, inline: true}
         );
