@@ -1,10 +1,10 @@
 # Any sort of globally available client configuration will go here. 
-prefix: '.'
+prefix: '`'
 
 colors: 
   commands: '#7289DA'
   errors: 'RED'
 
 permissions: 
-  checkAdmin: true
-  checkOwner: true
+  checkAdmin: true # Whether or not permission checks will check for admin permissions.
+  checkOwner: true # Whether or not permission checks will check for owner permissions.

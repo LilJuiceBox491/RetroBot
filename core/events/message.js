@@ -7,6 +7,7 @@ module.exports = {
     },
     run: (client, message) => {
         if(message.author.bot) return; //Do nothing if user executing a message is a bot.
+        if(message.channel.type === 'dm') return; // Do nothing if in a DM channel. 
         if(message.content.toLowerCase().startsWith(client.config.prefix)) {
 
             const content = message.content;
