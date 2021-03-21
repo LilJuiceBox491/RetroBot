@@ -6,7 +6,7 @@
 - [License](#license)
 
 # RetroBot
-The goal of this project is to make a multi-purpose discord bot created using discord.js with Node.js v12.
+This is the official repository for the open-source RetroBot. The `master` branch will always be the current stable version, you're welcome to clone and use other branches as well, but be aware that fatal errors can occur with them.
 
 ---
 
@@ -42,7 +42,7 @@ An exhaustive list of commands will be available at a later date.
 ---
 
 # License
-Before forking this repository, please be sure to refer to it's `LICENSE`. This project is open source and you're free to use any of it's source as long as you abide by it's license.
+Before forking or cloning this repository, please be sure to refer to it's `LICENSE`. This project is open source and you're free to use any of it's source as long as you abide by it's license.
 
 TL;DR: 
 You are free to distribute this repository, altered or not, commercially or not, as long as you agree to the following: 
