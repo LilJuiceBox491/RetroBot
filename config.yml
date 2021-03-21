@@ -1,5 +1,5 @@
 # Any sort of globally available client configuration will go here. 
-prefix: '.'
+prefix: '`'
 
 colors: 
   commands: '#7289DA'
