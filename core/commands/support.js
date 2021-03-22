@@ -16,7 +16,7 @@ module.exports = {
         .setAuthor(message.author.tag, message.author.avatarURL())
         .setColor(client.config.colors.commands)
         .addFields(
-            {name: 'Server:', value: `Please click [here](https://discord.gg/8Pfj8GXRvk) to join the support server!`},
+            {name: 'Server:', value: `Please click [here](${client.config.links.supportServer}) to join the support server!`},
             {name: 'Info:', value: `For other important information, please refer to the \`${client.config.prefix}info\` command.`}
         );
 
