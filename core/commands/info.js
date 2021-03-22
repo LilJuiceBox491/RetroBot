@@ -9,6 +9,7 @@ module.exports = {
         aliases: [], 
         permissions: [], 
         clientPermissions: [], 
+        ownerOnly: false,
         group: 'util',
         description: 'Replies with info about the bot, as well as where to report bugs, request features, or get support.',
         usage: 'info'

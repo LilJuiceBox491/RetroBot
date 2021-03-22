@@ -5,6 +5,7 @@ module.exports = {
         aliases: [],
         permissions: [],
         clientPermissions: [],
+        ownerOnly: false,
         group: 'gen',
         description: 'Sends command help.',
         usage: 'help'
@@ -13,7 +14,7 @@ module.exports = {
         // If a user provides an argument
         if(args[0]) {
             const cmd = client.commands.get(args[0]) || client.commands.get(client.aliases.get(args[0]));
-            if(!cmd) {
+            if(!cmd || !cmd.config.group) {
                 const e = new Discord.MessageEmbed()
                 .setDescription(`The command/alias you provided does not exist.`)
                 .setColor(client.config.colors.errors);

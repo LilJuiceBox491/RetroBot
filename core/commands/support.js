@@ -6,6 +6,7 @@ module.exports = {
         aliases: [], 
         permissions: [], 
         clientPermissions: [], 
+        ownerOnly: false,
         group: 'util',
         description: 'Replies with a link to the support server.',
         usage: 'support'
