@@ -6,7 +6,7 @@
 - [License](#license)
 
 # RetroBot
-This is the official repository for the open-source RetroBot. The `master` branch will always be the current stable version, you're welcome to clone and use other branches as well, but be aware that fatal errors can occur with them.
+This is the official repository for the open-source RetroBot. The current stable version of this repository will always be it's latest release. Please download that rather than cloning the repository.
 
 ---
 
