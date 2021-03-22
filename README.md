@@ -8,6 +8,8 @@
 # RetroBot
 This is the official repository for the open-source RetroBot. The current stable version of this repository will always be it's latest release. Please download that rather than cloning the repository.
 
+It's next release will always be in the form of a branch. You are free to clone this branch but please keep in mind that it WILL have errors and possible instabilities. It's always safer to simply download the latest release.
+
 ---
 
 # Contributors
