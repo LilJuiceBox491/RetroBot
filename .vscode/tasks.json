@@ -11,6 +11,13 @@
 				"kind": "build",
 				"isDefault": true
 			}
+		},
+		{
+			"type": "npm",
+			"script": "deterministic_install",
+			"problemMatcher": [],
+			"label": "npm: deterministic_install",
+			"detail": "npm ci"
 		}
 	]
 }
