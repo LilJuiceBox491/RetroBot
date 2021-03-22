@@ -8,3 +8,11 @@ colors:
 permissions: 
   checkAdmin: true # Whether or not permission checks will check for admin permissions.
   checkOwner: true # Whether or not permission checks will check for owner permissions.
+
+# Below this is special config for commands.
+info: 
+  email: 'retrobotdev@gmail.com'
+  botInvite: 'https://discord.com/oauth2/authorize?client_id=822909138102648892&scope=bot&permissions=8'
+
+support: 
+  supportServer: 'https://discord.gg/8Pfj8GXRvk'
