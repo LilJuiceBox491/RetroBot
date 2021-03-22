@@ -37,9 +37,8 @@ module.exports = {
                     `I am missing the following permissions required for this command:\n${cmdFile.config.clientPermissions.map(el => `\`${el}\``).join('\n')}`
                 ));
 
-
-                cmdFile.run(client, message, args);
                 client.commandsRun++;
+                cmdFile.run(client, message, args);
                 client.log.cmd(`${message.author.tag} (${message.author.id}) executed ${cmdFile.config.name.toUpperCase()} with the following arguments: ${args.length > 0 ? `${args.map(el => el)}` : 'None.'}`);
             }
         }
