@@ -24,7 +24,7 @@ module.exports = {
             {name: 'Bug Reports/Feature Requests:', value: `To submit a bug report or a feature request, please click [here](${package.bugs.url}).`},
             {name: 'Email:', value: `Need to email the team? Do so at \`${client.config.info.email}\``},
             {name: 'Invite:', value: `Click [here](${client.config.info.botInvite}) to invite RetroBot to your server.`},
-            {name: 'Last Reset:', value: `${client.lastReset} (GMT)`, inline: true},
+            {name: 'Last Reset:', value: `${client.lastReset}`, inline: true},
             {name: 'Commands Run Since Last Reset:', value: `${client.commandsRun}`, inline: true}
         );
 
