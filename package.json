@@ -1,6 +1,6 @@
 {
   "name": "retrobot",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Open-source Discord.js bot.",
   "repository": {
     "type": "git",
@@ -12,7 +12,8 @@
   "homepage": "https://github.com/LilJuiceBox491/RetroBot#readme",
   "main": "index.js",
   "scripts": {
-    "run": "node index.js"
+    "run": "node index.js",
+    "deterministic_install": "npm ci"
   },
   "keywords": [],
   "author": "LilJuiceBox491",
