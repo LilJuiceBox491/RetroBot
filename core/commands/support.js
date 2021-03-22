@@ -17,7 +17,7 @@ module.exports = {
         .setColor(client.config.colors.commands)
         .addFields(
             {name: 'Server:', value: `Please click [here](https://discord.gg/8Pfj8GXRvk) to join the support server!`},
-            {name: 'Info:', value: `For other important information, please refer to the ${client.config.prefix}info command.`}
+            {name: 'Info:', value: `For other important information, please refer to the \`${client.config.prefix}info\` command.`}
         );
 
         message.channel.send(e);
