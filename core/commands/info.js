@@ -3,6 +3,9 @@ const { readFileSync } = require('fs');
 
 const package = JSON.parse(readFileSync('package.json', 'utf8'));
 
+/**
+ * @type {RB.Command}
+ */
 module.exports = {
     config: {
         name: 'info',

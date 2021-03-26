@@ -1,5 +1,8 @@
 const { MessageEmbed } = require("discord.js");
 
+/**
+ * @type {RB.Command}
+ */
 module.exports = {
     config: {
         name: 'support',
