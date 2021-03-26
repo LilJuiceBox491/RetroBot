@@ -1,4 +1,7 @@
 
+/**
+ * @type {RB.Command}
+ */
 module.exports = {
     config: {
         name: 'kick',

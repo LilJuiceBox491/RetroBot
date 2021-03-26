@@ -1,6 +1,9 @@
 const permissionCheck = require('../util/permissionCheck');
 const EmbedUtil = require('../util/EmbedUtility');
 
+/**
+ * @type {RB.MessageEvent}
+ */
 module.exports = {
     config: {
         name: 'message'

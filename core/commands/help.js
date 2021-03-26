@@ -1,4 +1,8 @@
 const Discord = require('discord.js');
+
+/**
+ * @type {RB.Command}
+ */
 module.exports = {
     config: {
         name: 'help',
