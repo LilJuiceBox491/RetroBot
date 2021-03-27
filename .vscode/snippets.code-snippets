@@ -25,12 +25,39 @@
 		],
 		"description": "Command"
 	},
+	"CommandNoComment": {
+		"prefix": "commandNoComment",
+		"body": [
+		  "/**",
+		  " * @type {RB.Command}",
+		  " */",
+		  "module.exports = {",
+		  "    config: {",
+		  "        name: '',",
+		  "        aliases: [],",
+		  "        permissions: [],",
+		  "        clientPermissions: [],",
+		  "        ownerOnly: false,",
+		  "        group: '',",
+		  "        description: '',",
+		  "        usage: ''",
+		  "    },",
+		  "    run: (client, message, args) => {",
+		  "        ",
+		  "    }",
+		  "}"
+		],
+		"description": "CommandNoComment"
+	},
 	"Event": {
 		"prefix": "event",
 		"body": [
 		  "/* eslint-disable no-unused-vars */",
 		  "// Remove the above comment.",
 		  "",
+		  "/**",
+		  " * @type {RB.Event}",
+		  " */",
 		  "module.exports = {",
 		  "    config: {",
 		  "        name: '' // The event name.",
@@ -47,5 +74,22 @@
 		  "// And so on..."
 		],
 		"description": "Event"
+	},
+	"EventNoComment": {
+		"prefix": "eventNoComment",
+		"body": [
+		  "/**",
+		  " * @type {RB.Event}",
+		  " */",
+		  "module.exports = {",
+		  "    config: {",
+		  "        name: '' // The event name.",
+		  "    },",
+		  "    run: (client) => {",
+		  "        // Code here",
+		  "    }",
+		  "}"
+		],
+		"description": "EventNoComment"
 	}
 }
