@@ -1,11 +1,15 @@
 const { MessageEmbed } = require("discord.js");
 
+/**
+ * @type {RB.Command}
+ */
 module.exports = {
     config: {
         name: 'support',
         aliases: [], 
         permissions: [], 
         clientPermissions: [], 
+        ownerOnly: false,
         group: 'util',
         description: 'Replies with a link to the support server.',
         usage: 'support'

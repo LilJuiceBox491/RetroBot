@@ -3,12 +3,16 @@ const { readFileSync } = require('fs');
 
 const package = JSON.parse(readFileSync('package.json', 'utf8'));
 
+/**
+ * @type {RB.Command}
+ */
 module.exports = {
     config: {
         name: 'info',
         aliases: [], 
         permissions: [], 
         clientPermissions: [], 
+        ownerOnly: false,
         group: 'util',
         description: 'Replies with info about the bot, as well as where to report bugs, request features, or get support.',
         usage: 'info'

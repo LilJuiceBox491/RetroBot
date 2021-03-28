@@ -1,4 +1,7 @@
-  
+
+/**
+ * @type {RB.GroupData[]}
+ */
 module.exports = [
     {id: 'gen', name: 'General', icon: ':globe_with_meridians:'},
     {id: 'mod', name: 'Moderation', icon: ':hammer:'},

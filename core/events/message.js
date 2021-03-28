@@ -1,13 +1,22 @@
 const permissionCheck = require('../util/permissionCheck');
 const EmbedUtil = require('../util/EmbedUtility');
 
+/**
+ * @type {RB.MessageEvent}
+ */
 module.exports = {
     config: {
         name: 'message'
     },
-    run: (client, message) => {
+    run: async (client, message) => {
         if(message.author.bot) return; //Do nothing if user executing a message is a bot.
         if(message.channel.type === 'dm') return; // Do nothing if in a DM channel. 
+
+        // Database Validators
+        await require('../validators/EconDBValidator')(client, message);
+        await require('../validators/ModDBValidator')(client, message);
+
+
         if(message.content.toLowerCase().startsWith(client.config.prefix)) {
 
             const content = message.content;
@@ -21,6 +30,10 @@ module.exports = {
             const cmdFile = client.commands.get(command) || client.commands.get(client.aliases.get(command))
             // If found, run the command file's run() function.
             if(cmdFile) {
+                if(cmdFile.config.ownerOnly) {
+                    if(!client.config.botOwners.includes(message.author.id)) return;
+                }
+
                 // Run permission check on member
                 const memberCheck = permissionCheck(client, message.member, cmdFile.config.permissions);
                 if(memberCheck.length) return message.channel.send(EmbedUtil(

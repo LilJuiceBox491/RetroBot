@@ -2,9 +2,11 @@ const statusInterval = require('../util/statusInterval');
 const Help = require('../Handlers/Help');
 const moment = require('moment-timezone');
 
-// eslint-disable-next-line no-unused-vars
 const purgeCachedUsers = require('../util/purgeCachedUsers');
 
+/**
+ * @type {RB.ReadyEvent}
+ */
 module.exports = {
     config: {
         name: 'ready'
